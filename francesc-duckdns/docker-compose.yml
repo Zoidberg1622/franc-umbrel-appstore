@@ -8,3 +8,4 @@ services:
       - SUBDOMAINS=jzoidberg
       - TOKEN=3a1a4575-0490-4745-bf35-b2d6d52b7421
     restart: on-failure
+icon: https://raw.githubusercontent.com/tu-usuario/francesc-umbrel-apps/main/francesc-duckdns/icon.png
