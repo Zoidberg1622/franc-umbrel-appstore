@@ -1,14 +1,10 @@
-version: "3.7"
-
 services:
-
-  app_proxy:
+  app:
+    image: lscr.io/linuxserver/duckdns:latest
     environment:
-      # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: sparkles-hello-world_server_1
-      APP_PORT: 3000
-    
-  server:
-    image: getumbrel/community-app-store-hello-world:latest
-    user: "1000:1000"
-    init: true
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Madrid
+      - SUBDOMAINS=jzoidberg
+      - TOKEN=3a1a4575-0490-4745-bf35-b2d6d52b7421
+    restart: on-failure
